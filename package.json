@@ -2,8 +2,11 @@
   "name": "testcontainers-reuse",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "transpile": "tsc",
+    "test": "node --test src/*.test.ts",
+    "test:serial": "node --test-concurrency 1 --test src/*.test.ts"
   },
   "keywords": [],
   "author": "",
